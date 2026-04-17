@@ -94,7 +94,7 @@ if not df_table.empty:
     df_display["Var. Dia (%)"] = df_display["Var. Dia (%)"].apply(fmt_pct)
     df_display["Volume"]       = df_display["Volume"].apply(fmt_big)
 
-    styled = df_display.style.applymap(color_var, subset=["Var. Dia (%)"])
+    styled = df_display.style.map(color_var, subset=["Var. Dia (%)"])
     st.dataframe(styled, use_container_width=True, hide_index=True)
 
     # Gráfico de variações
