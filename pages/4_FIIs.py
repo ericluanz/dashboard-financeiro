@@ -112,7 +112,7 @@ if not df_fiis.empty:
     df_display["Volume"]       = df_display["Volume"].apply(fmt_big)
 
     st.dataframe(
-        df_display.style.applymap(color_var, subset=["Var. Dia (%)"]),
+        df_display.style.map(color_var, subset=["Var. Dia (%)"]),
         use_container_width=True, hide_index=True,
     )
 
